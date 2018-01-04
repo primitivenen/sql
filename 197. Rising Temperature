@@ -1,0 +1,6 @@
+# Write your MySQL query statement below
+select w.Id
+from Weather w
+where w.Temperature>(select w2.Temperature
+from Weather w2
+where DateDiff(w.Date, w2.Date)=1);
